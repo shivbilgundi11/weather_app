@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <!-- ---------Style-Sheet-Linking--------- -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ---------Remix-Icon-CDN-Linking--------- -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <!-- MAIN -->
+    <main class="container" id="main">
+        <div class="wrapper main-grid">
+            <!-- Content-Left -->
+            <section class="content-left">
+                <!-- Nav-Menu -->
+                <nav class="nav-menu">
+                    <a href="index.html" class="logo">weather<span>.</span>io</a>
+
+                    <div class="search-section">
+                        <i class="ri-user-location-line" id="user-loc"></i>
+                        <input type="text" name="search" id="search" placeholder="Search any city...">
+                        <i class="ri-search-line" id="search-btn"></i>
+                    </div>
+                </nav>
+
+
+
+                <!-- Weather-Grid -->
+                <div class="app-container">
+
+                    <!-- Weather-Info -->
+                    <div class="weather-info-container weather-box">
+                        <div class="weather-info-wrapper">
+
+                            <div class="weather-info-header">
+                                <span class="weather-icon temp-icon"><img src="" alt=""></span>
+
+                                <div class="weather-info">
+                                    <p class="title-1">Weather</p>
+                                    <p class="title-2">What's the weather.</p>
+                                </div>
+                            </div>
+
+                            <div class="weather-data-wrapper">
+                                <p class="value"><span class="temp-data"></span> <span class="badge temp-min"></span></p>
+                                <p class="title-2 weather-desc"></p>
+                            </div>
+
+                            <div class="other-weather-wrapper">
+                                <div class="pressure box">
+                                    <p class="title-2">Pressure</p>
+                                    <p class="pressure-data value-2"></p>
+                                </div>
+                                <div class="visibility box">
+                                    <p class="title-2">Visibility</p>
+                                    <p class="visibility-data value-2"></p>
+                                </div>
+                                <div class="humidity box">
+                                    <p class="title-2">Humidity</p>
+                                    <p class="humidity-data value-2"></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Air-Quality-Container -->
+                    <div class="aqi-container weather-box">
+                        <div class="aqi-info-wrapper">
+
+                            <div class="aqi-info-header">
+                                <i class="ri-windy-line"></i>
+
+                                <div class="aqi-info">
+                                    <p class="title-1">Air Quality</p>
+                                </div>
+                            </div>
+
+                            <div class="aqi-data-wrapper">
+                                <p class="title aqi-code" style="font-size: 24px;"></p>
+                            </div>
+
+                            <div class="aqi-footer">
+                                <div class="aqi-status">
+                                    <p class="title-2">Good</p>
+                                    <p class="title-2">Hazardous</p>
+                                </div>
+
+                                <div class="very-poor" id="aqi-status-range"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- All-Day-Info -->
+                    <div class="all-day-info-container weather-box">
+                        <div class="all-info-container">
+                            <div class="all-info-header">
+                                <p class="title">How's the<br>weather today?</p>
+
+                                <i class="ri-temp-cold-line"></i>
+                            </div>
+
+                            <div class="all-info-wrapper">
+                                <div class="morning day-info-box">
+                                    <div class="day-info-header">
+                                        <span class="day-weather-icon morn-icon"><img src="https://openweathermap.org/img/wn/02n.png" alt="" width="50" height="50"></span>
+                                        <p class="morn-desc desc title-3"></p>
+                                    </div>
+
+                                    <div class="morning-info-box">
+                                        <p class="morning-temp value-3"></p>
+                                        <p class="title-2">Morning</p>
+                                    </div>
+                                </div>
+
+                                <div class="afternoon day-info-box">
+                                    <div class="day-info-header">
+                                        <span class="day-weather-icon after-icon"><img src="https://openweathermap.org/img/wn/02n.png" alt="" width="50" height="50"></span>
+                                        <p class="after-desc desc title-3"></p>
+                                    </div>
+
+                                    <div class="afternoon-info-box">
+                                        <p class="after-temp value-3"></p>
+                                        <p class="title-2">Afternoon</p>
+                                    </div>
+                                </div>
+
+                                <div class="evening day-info-box">
+                                    <div class="day-info-header">
+                                        <span class="day-weather-icon even-icon"><img src="https://openweathermap.org/img/wn/02n.png" alt="" width="50" height="50"></span>
+                                        <p class="even-desc desc title-3"></p>
+                                    </div>
+
+                                    <div class="evening-info-box">
+                                        <p class="even-temp value-3"></p>
+                                        <p class="title-2">Evening</p>
+                                    </div>
+                                </div>
+
+                                <div class="night day-info-box">
+                                    <div class="day-info-header">
+                                        <span class="day-weather-icon night-icon"><img src="https://openweathermap.org/img/wn/02n.png" alt="" width="50" height="50"></span>
+                                        <p class="night-desc desc title-3"></p>
+                                    </div>
+
+                                    <div class="night-info-box">
+                                        <p class="night-temp value-3"></p>
+                                        <p class="title-2">Night</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tomorrow-Info -->
+                    <div class="tomorrow-info-container weather-box">
+                        <div class="tomorrow-wrapper">
+                            <div class="tomorrow-header">
+                                <p class="title-1">Tomorrow</p>
+                                <p class="title city-name"></p>
+                            </div>
+
+                            <div class="tomorrow-info">
+                                <p class="value temp tomorrow-temp"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Content-Right -->
+            <section class="content-right">
+                <div class="content-right-wrapper">
+
+                    <div class="sun-info-container">
+                        <div class="sun-header">
+                            <div class="sun-header-info">
+                                <p class="title current-day" id="day"></p>
+
+                                <p class="title-2"><span class="city-name"></span>, <span class="country"></span></p>
+                            </div>
+
+                            <p class="temp-data title">22°C</p>
+                        </div>
+
+                        <img src="./assets/sun-rise.png" alt="img">
+
+                        <div class="sun-footer">
+                            <p><span class="title-2">Sunrise</span><br><span class="title-2 rise-time">06:00 am</span></p>
+                            <p><span class="title-2">Sunset</span><br><span class="title-2  set-time">06:15 pm</span></p>
+                        </div>
+                    </div>
+
+                    <div class="next-days-container">
+                        <div class="next-days-wrapper">
+                            <p class="title-1">Next 5 days weather</p>
+
+                            <div class="next-days-info-box">
+                                <div class="1-day day-info">
+                                    <div class="1-day-info day-data">
+                                        <p class="title-1 day"></p>
+                                        <p class="title-1 day-1-temp"></p>
+                                        <p class="title-2 desc day-1-desc">Clear Sky</p>
+                                    </div>
+
+                                    <div>
+                                        <span class="day-weather-icons day-1-icon"><img src="" alt=""></span>
+                                    </div>
+                                </div>
+                                <div class="2-day day-info">
+                                    <div class="1-day-info day-data">
+                                        <p class="title-1 day"></p>
+                                        <p class="title-1 day-2-temp"></p>
+                                        <p class="title-2 desc day-2-desc">Clear Sky</p>
+                                    </div>
+
+                                    <div>
+                                        <span class="day-weather-icons day-2-icon"><img src="" alt=""></span>
+                                    </div>
+                                </div>
+                                <div class="3-day day-info">
+                                    <div class="1-day-info day-data">
+                                        <p class="title-1 day"></p>
+                                        <p class="title-1 day-3-temp"></p>
+                                        <p class="title-2 desc day-3-desc">Clear Sky</p>
+                                    </div>
+
+                                    <div>
+                                        <span class="day-weather-icons day-3-icon"><img src="" alt=""></span>
+                                    </div>
+                                </div>
+                                <div class="4-day day-info">
+                                    <div class="1-day-info day-data">
+                                        <p class="title-1 day"></p>
+                                        <p class="title-1 day-4-temp"></p>
+                                        <p class="title-2 desc day-4-desc">Clear Sky</p>
+                                    </div>
+
+                                    <div>
+                                        <span class="day-weather-icons day-4-icon"><img src="" alt=""></span>
+                                    </div>
+                                </div>
+                                <div class="5-day day-info">
+                                    <div class="1-day-info day-data">
+                                        <p class="title-1 day"></p>
+                                        <p class="title-1 day-5-temp"></p>
+                                        <p class="title-2 desc day-5-desc">Clear Sky</p>
+                                    </div>
+
+                                    <div>
+                                        <span class="day-weather-icons day-5-icon"><img src="" alt=""></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="" id="loader"></div>
+
+    <br>
+    <br>
+
+    <footer class="container">
+        <p class="title-2">Copyright 2023 Shiv Bilgundi. All Rights Reserved.</p>
+
+        <p class="title-2 page">Powered By <a href="https://openweathermap.org/" class="link" target="_blank"><img src="./assets/openweather.png" alt="" class="page-img"></a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
