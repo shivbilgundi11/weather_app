@@ -1,1 +1,3 @@
 # weather_app
+
+The application provides the current weather info and next 5 days of forecast and has current location(user device location) also is being fetched. The application works smoothly and any city weather info can be requested...
