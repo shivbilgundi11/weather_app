@@ -1,6 +1,5 @@
 <h1 align="center" id="title">Weather Forecasting App</h1>
 
-<p align="center">![shivbilgundi11 github io_weather_app_](https://github.com/shivbilgundi11/weather_app/assets/101513013/68122463-a25b-4b8e-97d5-5bcadd4ae512)</p>
 
 <p id="description">The application provides the current weather info and next 5 days of forecast and has current location(user device location) also is being fetched. The application works smoothly and any city weather info can be requested through search input.</p>
 
