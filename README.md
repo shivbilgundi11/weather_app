@@ -16,8 +16,8 @@
 
 Here're some of the project's best features:
 
-*   Any city weather info can requested.
-*   User's current location data can requested.
+*   Any city weather info can be requested.
+*   User's current location data can be requested.
 *   Upcoming 5 days weather details is been seen.
 *   Info about the current Air quality can be seen of any city.
 *   The App is completely mobile responsive.
