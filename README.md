@@ -10,7 +10,6 @@
 <h2>Project Screenshots:</h2>
 
 ![shivbilgundi11 github io_weather_app_](https://github.com/shivbilgundi11/weather_app/assets/101513013/68122463-a25b-4b8e-97d5-5bcadd4ae512)
-<img src="https://github.com/shivbilgundi11/weather_app/assets/101513013/34140515-3c14-402c-8d8c-f891983d24d6" width="250">
 
 
   
