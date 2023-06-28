@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Weather Forecasting App</h1>
 
-<p align="center"><img src="https://drive.google.com/file/d/1aTYl1y5YUfxRPkFQu-OuuQyvM0XhmqNz/view?usp=drive_link" alt="project-image"></p>
+
 
 <p id="description">The application provides the current weather info and next 5 days of forecast and has current location(user device location) also is being fetched. The application works smoothly and any city weather info can be requested through search input.</p>
 
@@ -8,9 +8,7 @@
 
 [https://shivbilgundi11.github.io/weather\_app/](https://shivbilgundi11.github.io/weather_app/)
 
-<h2>Project Screenshots:</h2>
 
-<img src="https://drive.google.com/file/d/1aTYl1y5YUfxRPkFQu-OuuQyvM0XhmqNz/view?usp=drive_link" alt="project-screenshot" width="500" height="400/">
 
   
   
@@ -35,6 +33,4 @@ Technologies used in the project:
 *   CSS
 *   JavaScript
 
-<h2>🛡️ License:</h2>
 
-This project is licensed under the
